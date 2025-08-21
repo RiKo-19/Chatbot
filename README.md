@@ -1,6 +1,4 @@
-# Chatbot
-
-# 🗨️ Local CLI Chatbot using Flan-T5  
+# Chatbot using Flan-T5 
 
 This project is a **command-line chatbot** built as part of the ATG Technical Assignment.  
 It uses **Hugging Face’s Flan-T5 model** for text generation, with a **sliding window memory** and a **fallback mechanism** to ensure more accurate answers for common factual questions.  
@@ -8,12 +6,12 @@ It uses **Hugging Face’s Flan-T5 model** for text generation, with a **sliding
 ---
 
 ## 📌 Features
-- ✅ Uses **Flan-T5-base** (`google/flan-t5-base`) as the main text generation model.  
-- ✅ Maintains **short-term memory** (last 3–5 turns) for context.  
-- ✅ Expands follow-up queries (*“And India?”*) into full questions (*“What is the capital of India?”*).  
-- ✅ **Fallback validator** ensures correct answers for common factual queries (e.g., capitals).  
-- ✅ Simple **CLI interface** with `/exit` command to quit.  
-- ✅ Modular structure with separate files:
+- Uses **Flan-T5-base** (`google/flan-t5-base`) as the main text generation model.  
+- Maintains **short-term memory** (last 3–5 turns) for context.  
+- Expands follow-up queries (*“And India?”*) into full questions (*“What is the capital of India?”*).  
+- **Fallback validator** ensures correct answers for common factual queries (e.g., capitals).  
+- Simple **CLI interface** with `/exit` command to quit.  
+- Modular structure with separate files:
   - `model_loader.py` → Loads Hugging Face model  
   - `chat_memory.py` → Sliding window memory  
   - `interface.py` → CLI loop + integration + fallback logic  
@@ -64,39 +62,10 @@ Exiting chatbot. Goodbye!
 
 ---
 
-## 📂 Project Structure
-```
-chatbot/
-│── model_loader.py   # Loads Flan-T5 model
-│── chat_memory.py    # Sliding window memory buffer
-│── interface.py      # CLI chatbot with fallback + query expansion
-│── README.md         # Documentation
-```
-
----
-
-## 🎥 Demo Video
-- Record a short **2–3 min video** showing:
-  - Folder structure  
-  - Code explanation (model loader, memory, interface)  
-  - Running chatbot in terminal  
-  - Few example Q&A interactions  
-- Upload to **Google Drive or YouTube (unlisted link)**  
-
----
-
 ## 📌 Notes
 - This chatbot is **not a perfect knowledge model** — Flan-T5 is an instruction model and may hallucinate.  
 - The **fallback system** ensures factual accuracy for certain queries (e.g., capitals, jokes, identity).  
 - The focus of this assignment is **integration, memory handling, and CLI interface**.  
-
----
-
-## 📊 Deliverables
-- ✅ Modular Python scripts  
-- ✅ README.md with setup & examples  
-- ✅ Demo video link  
-- (Optional) Jupyter notebook if prototyped  
 
 ---
 
